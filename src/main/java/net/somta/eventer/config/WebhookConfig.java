@@ -2,6 +2,7 @@ package net.somta.eventer.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 /**
  * @Description: webhook 的配置类
@@ -28,7 +29,7 @@ public class WebhookConfig {
     }
 
     boolean isActivate(){
-        if(url != null){
+        if(!StringUtils.isEmpty(url)){
             return true;
         }
         return false;
