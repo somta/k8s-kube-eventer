@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: somta-kube-eventer
+
+k8s:
+  cluster:
+    config:
+      url: your_k8s_url
+      token: your_k8s_token
+
+event:
+  sink:
+    webhook:
+      url: http://127.0.0.1:8080
+
+
