@@ -26,4 +26,11 @@ public class WebhookConfig {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    boolean isActivate(){
+        if(url != null){
+            return true;
+        }
+        return false;
+    }
 }
