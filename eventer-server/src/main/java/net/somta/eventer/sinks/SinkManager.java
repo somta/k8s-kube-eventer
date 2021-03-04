@@ -1,6 +1,10 @@
 package net.somta.eventer.sinks;
 
 import io.fabric8.kubernetes.api.model.Event;
+import java.time.chrono.IsoChronology;
+import java.util.ArrayList;
+import java.util.List;
+import net.somta.eventer.EventBody;
 
 /**
  * @Description //TODO
@@ -9,6 +13,11 @@ import io.fabric8.kubernetes.api.model.Event;
  * @Version 1.0
  **/
 public class SinkManager {
+
+    /**
+     * 所有的sink
+     */
+    private List<ISink> sinks = new ArrayList<>();
 
     private static final SinkManager sinkManagerInstance = new SinkManager();
 
@@ -20,12 +29,17 @@ public class SinkManager {
 
     /**
      * export Event
-     * @param event
+     * @param eventBody
      */
-    public void export(Event event){
-
+    public void export(EventBody eventBody){
+        for (ISink sink : sinks){
+            sink.send(eventBody);
+        }
     }
 
+    public void addSink(ISink sink){
+        sinks.add(sink);
+    }
 
 
 }

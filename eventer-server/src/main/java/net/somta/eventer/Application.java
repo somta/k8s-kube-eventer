@@ -2,7 +2,6 @@ package net.somta.eventer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @Description:
@@ -11,7 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @Blog: https://www.somta.net/
  * @Version: 1.0.0
  */
-@EnableScheduling
 @SpringBootApplication
 public class Application {
 

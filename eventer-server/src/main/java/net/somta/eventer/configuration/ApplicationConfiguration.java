@@ -41,7 +41,7 @@ public class ApplicationConfiguration {
         return new DefaultKubernetesClient(config);
     }
 
-    @Bean
+  /*  @Bean
     public ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         //允许使用未带引号的字段名
@@ -49,6 +49,6 @@ public class ApplicationConfiguration {
         //允许使用单引号
         objectMapper.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES, true);
         return objectMapper;
-    }
+    }*/
 
 }

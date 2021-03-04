@@ -1,5 +1,7 @@
 package net.somta.eventer.sinks.elasticsearch;
 
+import io.fabric8.kubernetes.api.model.Event;
+import net.somta.eventer.EventBody;
 import net.somta.eventer.sinks.ISink;
 
 /**
@@ -11,7 +13,7 @@ import net.somta.eventer.sinks.ISink;
 public class ElasticSearchSink implements ISink {
 
     @Override
-    public void send() {
+    public void send(EventBody eventBody) {
 
     }
 }
