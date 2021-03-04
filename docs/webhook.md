@@ -1,3 +1,3 @@
-# Somta
+# somta-kube-eventer
 ## 项目介绍
-Somta是一个帮开发者快速开发的一套完整java库
+接管K8S的事件，支持定制多个输出端
