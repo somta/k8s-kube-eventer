@@ -18,4 +18,10 @@ event:
     webhook:
       url: http://127.0.0.1:8080/v1/event/webhook
 
+    elasticsearch:
+      serverUrl: http://es-cn-nif1s8d2g0025dnc4.elasticsearch.aliyuncs.com
+      serverPort: 9200
+      username: elastic
+      password: H3password
+
 

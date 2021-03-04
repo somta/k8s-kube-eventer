@@ -32,7 +32,7 @@ public class WebhookConfig implements InitializingBean {
         this.url = url;
     }
 
-    boolean isActivate(){
+    private boolean isActivate(){
         if(!StringUtils.isEmpty(url)){
             return true;
         }
